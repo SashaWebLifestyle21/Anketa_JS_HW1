@@ -95,15 +95,16 @@ function showAnketa(){
 }
 
 function searchRusVowelsWay1(str){
-    const arrVowels = ['а','e','ё','и','о','у','ы','э','ю','я','А','Е','Ё','И','О','У','Ы','Э','Ю','Я']
+    const arrVowels = ['а','е','ё','и','о','у','ы','э','ю','я','А','Е','Ё','И','О','У','Ы','Э','Ю','Я']
     let arrResult = []
     for(let i=0;i<str.length;i++){
-        for(let j=0;j<str.length;j++){
+        for(let j=0;j<arrVowels.length;j++){
             if(str[i]===arrVowels[j]){
                 arrResult.push(str[i])
             }
         }
     }
+    alert('Результат в консоли')
     console.log('Найденые гласные буквы')
     for(let i=0;i<arrResult.length;i++){
         console.log(arrResult[i])
